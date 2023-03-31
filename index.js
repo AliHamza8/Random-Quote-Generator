@@ -20,3 +20,12 @@ let quotes = [
     "Do not go where the path may lead, go instead where there is no path and leave a trail. -Ralph Waldo Emerson"
 ]
 
+let btn = document.querySelector('.btn-next')
+let quoteSection = document.querySelector('.quotes')
+
+btn.addEventListener('click',  () => {
+    quoteSection.textContent = ''
+    let generateQuote = Math.floor(Math.random() * 19)
+    quoteSection.textContent = quotes[generateQuote]
+})
+
